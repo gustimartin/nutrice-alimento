@@ -25,12 +25,7 @@ export async function POST(request) {
       data: {
         name,
         description,
-        category: {
-          create: {
-            name: "",
-            image: "",
-          },
-        },
+        category,
         nutrition,
         price,
         brand,
