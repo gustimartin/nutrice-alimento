@@ -1,3 +1,5 @@
+import SliderCategories from "@/components/category/SliderCategories";
+
 function About() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -74,6 +76,7 @@ function About() {
           a seguir creciendo juntos hacia una vida más sana y feliz.
         </p>
       </div>
+      {/* <SliderCategories /> */}
     </div>
   );
 }

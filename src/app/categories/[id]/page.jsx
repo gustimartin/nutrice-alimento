@@ -13,7 +13,7 @@ function Products({ params }) {
         ? productFilter.map((el) => (
             <div key={el.id}>
               <ProductCard
-                image={el.image?.secure_url}
+                image={el.image}
                 name={el.name}
                 amount={el.amount}
                 price={el.price}

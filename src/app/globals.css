@@ -42,6 +42,11 @@ html {
     animation: slide-in-right 0.5s ease-in-out;
   }
 
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+    background-color: rgb(238, 238, 238);
+  }
   #root {
     display: flex;
     flex-direction: column;

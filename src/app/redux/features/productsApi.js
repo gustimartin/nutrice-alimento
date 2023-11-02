@@ -12,17 +12,20 @@ export const productsApi = createApi({
       query: () => "/products",
       providesTags: ["reload"],
     }),
-    // createProduct: builder.mutation({
-    //   query: (product) => ({
-    //     url: "/products",
-    //     method: "POST",
-    //     body: product,
-    //     // headers: {
-    //     //   "Content-Type": "multipart/form-data",
-    //     // },
-    //   }),
-    //   invalidatesTags: ["reload"],
+    // getProductDetail: builder.query({
+    //   query: (id) => `/products/${id} `,
     // }),
+    createProduct: builder.mutation({
+      query: (product) => ({
+        url: "/products",
+        method: "POST",
+        body: product,
+        //     // headers: {
+        //     //   "Content-Type": "multipart/form-data",
+        //     // },
+      }),
+      invalidatesTags: ["reload"],
+    }),
     // createCategory: builder.mutation({
     //   query: (category) => ({
     //     url: "/category",
@@ -40,4 +43,8 @@ export const productsApi = createApi({
   }),
 });
 
-export const { useGetAllProductsQuery, useGetCategoriesQuery } = productsApi;
+export const {
+  useGetAllProductsQuery,
+  useGetCategoriesQuery,
+  useCreateProductMutation,
+} = productsApi;

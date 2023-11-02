@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import SliderCategories from "./category/SliderCategories";
 
 function Hero() {
   const [animateLeft, setAnimateLeft] = useState(false);
@@ -63,6 +64,7 @@ function Hero() {
           ¡Bienvenido a Nutrice, donde la naturaleza se encuentra con el sabor!
         </p>
       </div>
+      {/* <SliderCategories /> */}
     </div>
   );
 }

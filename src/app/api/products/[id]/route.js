@@ -6,9 +6,6 @@ export async function GET(request, { params }) {
     where: {
       id: Number(params.id),
     },
-    include: {
-      category: true,
-    },
   });
   return NextResponse.json(prodId);
 }
