@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Products" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "category" TEXT NOT NULL,
     "description" TEXT NOT NULL,
@@ -8,14 +8,18 @@ CREATE TABLE "Products" (
     "price" INTEGER NOT NULL,
     "brand" TEXT NOT NULL,
     "stock" INTEGER NOT NULL,
-    "enable" BOOLEAN NOT NULL,
+    "enable" BOOLEAN NOT NULL DEFAULT true,
     "amount" INTEGER NOT NULL,
-    "image" TEXT NOT NULL
+    "image" TEXT NOT NULL,
+
+    CONSTRAINT "Products_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Categories" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "image" TEXT NOT NULL,
-    "name" TEXT NOT NULL
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "Categories_pkey" PRIMARY KEY ("id")
 );

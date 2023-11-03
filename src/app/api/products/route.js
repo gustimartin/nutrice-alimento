@@ -19,7 +19,7 @@ cloudinary.config({
 export async function POST(request) {
   try {
     const data = await request.formData();
-    console.log("data--", data);
+    // console.log("data--", data);
     const image = await data.get("image");
     const description = await data.get("description");
     const stock = await Number(data.get("stock"));
@@ -38,7 +38,7 @@ export async function POST(request) {
     await writeFile(filePath, buffer);
 
     const response = await cloudinary.uploader.upload(filePath);
-    console.log(response);
+    // console.log(response);
 
     const createProd = await prisma.products.create({
       data: {
@@ -49,7 +49,7 @@ export async function POST(request) {
         price,
         brand,
         stock,
-        enable: true,
+        enable,
         amount,
         image: response.secure_url,
       },

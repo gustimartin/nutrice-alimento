@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -19,7 +19,7 @@ model Products {
   price       Int
   brand       String
   stock       Int
-  enable      Boolean
+  enable      Boolean @default(true)
   amount      Int
   image       String
 }
