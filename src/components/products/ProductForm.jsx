@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import {
   useGetCategoriesQuery,
   useCreateProductMutation,
-} from "../redux/features/productsApi";
+} from "@/app/redux/features/productsApi";
 
 function ProductForm() {
   const { data: categories, error } = useGetCategoriesQuery();
