@@ -20,7 +20,6 @@ export async function POST(request) {
     const data = await request.formData();
     const image = await data.get("image");
     const name = await data.get("name");
-    // console.log(data);
 
     if (!image) {
       return NextResponse("no hay imagen");
