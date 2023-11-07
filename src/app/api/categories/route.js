@@ -17,9 +17,10 @@ cloudinary.config({
 
 export async function POST(request) {
   try {
-    const data = await request.forData();
+    const data = await request.formData();
     const image = await data.get("image");
     const name = await data.get("name");
+    // console.log(data);
 
     if (!image) {
       return NextResponse("no hay imagen");
