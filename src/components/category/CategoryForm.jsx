@@ -15,8 +15,9 @@ function CategoryForm() {
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("image", data.image[0]);
-    console.log(data);
+    // console.log(data);
     createCategory(formData);
+    reset();
   });
 
   return (

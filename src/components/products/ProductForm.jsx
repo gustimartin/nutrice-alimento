@@ -30,8 +30,9 @@ function ProductForm() {
     formData.append("stock", stock);
     formData.append("nutrition", data.nutrition);
     formData.append("image", data.image[0]);
-    console.log(data);
+    // console.log(data);
     createProduct(formData);
+    reset();
   });
 
   return (
